@@ -72,7 +72,7 @@ Set-ADAccountPassword -Credential $Cred $Username -reset -newpassword (ConvertTo
 
 # Grant Full Access mailbox rights to prompted user
 Write-Host "Adding $MailboxRights to mailbox permissions..."
-Add-MailboxPermission $Username@celticbank.com -User $MailboxRights -AccessRights FullAccess -InheritanceType All -Automapping $false
+Add-MailboxPermission $Username@<DOMAIN>.com -User $MailboxRights -AccessRights FullAccess -InheritanceType All -Automapping $false
 
 # Remove user from all shared mailboxes
 Write-Host "Removing user from all shared mailboxes...(this step can take 5 minutes)"
